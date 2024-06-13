@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="680.0" prefWidth="1585.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.addpublication">
+   <children>
+      <AnchorPane id="mainAnchorPane" layoutX="1531.0" layoutY="798.0" prefHeight="685.0" prefWidth="1586.0">
+
+         <!-- Main Content Area -->
+         <AnchorPane fx:id="listpublication" layoutX="112.0" layoutY="82.0" prefHeight="328.0" prefWidth="1403.0">
+            <children>
+               <Label fx:id="nomLabel" layoutX="513.0" layoutY="141.0" prefHeight="18.0" prefWidth="244.0" />
+               <Label fx:id="emailLabel" layoutX="521.0" layoutY="186.0" prefHeight="18.0" prefWidth="244.0" />
+               <Label fx:id="adresseLabel" layoutX="521.0" layoutY="227.0" prefHeight="18.0" prefWidth="244.0" />
+               <Label fx:id="num_telLabel" layoutX="521.0" layoutY="284.0" prefHeight="18.0" prefWidth="244.0" />
+               <ImageView fx:id="ima" fitHeight="186.0" fitWidth="233.0" layoutX="742.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" />
+               <ScrollPane layoutX="23.0" layoutY="92.0" prefHeight="447.0" prefWidth="1332.0">
+                  <content>
+                     <GridPane fx:id="gridpane" prefHeight="416.0" prefWidth="952.0">
+                        <columnConstraints>
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints maxHeight="115.00000610351563" minHeight="10.0" prefHeight="75.99999389648437" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="143.20001525878905" minHeight="10.0" prefHeight="89.1999755859375" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="164.19998779296873" minHeight="10.0" prefHeight="97.20002441406251" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                           <ImageView fx:id="qrcodeimage" fitHeight="150.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           <VBox prefHeight="616.0" prefWidth="222.0" />
+                        </children>
+                     </GridPane>
+                  </content>
+               </ScrollPane>
+               <Pagination fx:id="pagination" layoutX="23.0" layoutY="86.0" pageCount="10" prefHeight="516.0" prefWidth="1298.0" />
+            </children>
+         </AnchorPane>
+         <Button fx:id="ajoutpublication" layoutX="14.0" layoutY="287.0" mnemonicParsing="false" onAction="#ajoutpublication" prefHeight="38.0" prefWidth="91.0" styleClass="green-button" stylesheets="@stylesheet.css" text="Ajout" textFill="WHITE" />
+         <Button fx:id="bt_stat" layoutX="15.0" layoutY="364.0" mnemonicParsing="false" onAction="#stat" prefHeight="38.0" prefWidth="86.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Stat" textFill="WHITE" />
+         <HBox alignment="CENTER" layoutX="5.0" layoutY="8.0" prefHeight="82.0" prefWidth="1575.0" stylesheets="@/styles/style.css">
+            <children>
+               <Button mnemonicParsing="false" onAction="#goHome" prefHeight="62.0" prefWidth="94.0" styleClass="purple-button" stylesheets="@/styles/style.css" text="Home" textFill="WHITE">
+                  <font>
+                     <Font name="Andalus" size="20.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Separator maxHeight="40.0" minHeight="40.0" orientation="VERTICAL" prefHeight="40.0" />
+               <Button mnemonicParsing="false" onAction="#goToDon" prefHeight="62.0" prefWidth="86.0" styleClass="purple-button" stylesheets="@/styles/style.css" text="Dons" textFill="WHITE">
+                  <font>
+                     <Font name="Andalus" size="20.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets left="20.0" />
+                  </HBox.margin>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Separator maxHeight="40.0" minHeight="40.0" orientation="VERTICAL" prefHeight="40.0" />
+               <Button mnemonicParsing="false" onAction="#gordv" prefHeight="62.0" prefWidth="140.0" styleClass="purple-button" stylesheets="@/styles/style.css" text="Rendez-Vous" textFill="WHITE">
+                  <font>
+                     <Font name="Andalus" size="20.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Separator maxHeight="40.0" minHeight="40.0" orientation="VERTICAL" prefHeight="40.0" />
+               <Button mnemonicParsing="false" onAction="#foruum" prefHeight="62.0" prefWidth="90.0" styleClass="purple-button" stylesheets="@/styles/style.css" text="Forum" textFill="WHITE">
+                  <font>
+                     <Font name="Andalus" size="20.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Separator layoutX="168.0" layoutY="31.0" maxHeight="40.0" minHeight="40.0" orientation="VERTICAL" prefHeight="40.0" />
+               <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@styles/style.css" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Button layoutY="11.0" mnemonicParsing="false" onAction="#goToOrg" prefHeight="61.0" prefWidth="142.0" styleClass="purple-button" stylesheets="@/styles/style.css" text="Organisations" textFill="WHITE">
+                        <font>
+                           <Font name="Andalus" size="20.0" />
+                        </font>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+                     <Button layoutX="357.0" layoutY="11.0" mnemonicParsing="false" onAction="#gorec" prefHeight="61.0" prefWidth="124.0" styleClass="purple-button" stylesheets="@/styles/style.css" text="Support" textFill="WHITE">
+                        <font>
+                           <Font name="Andalus" size="20.0" />
+                        </font>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+                     <Separator layoutX="147.0" layoutY="22.0" maxHeight="40.0" minHeight="40.0" orientation="VERTICAL" prefHeight="40.0" />
+                     <Button layoutX="153.0" layoutY="13.0" mnemonicParsing="false" onAction="#godos" prefHeight="61.0" prefWidth="186.0" styleClass="purple-button" stylesheets="@/styles/style.css" text="Dossiers Médicaux" textFill="WHITE">
+                        <font>
+                           <Font name="Andalus" size="20.0" />
+                        </font>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+                     <Separator layoutX="344.0" layoutY="23.0" maxHeight="40.0" minHeight="40.0" orientation="VERTICAL" prefHeight="40.0" />
+                     <TextField fx:id="search" layoutX="515.0" layoutY="18.0"  prefHeight="44.0" prefWidth="260.0" promptText="Search....." styleClass="top-bar" stylesheets="@/values/style.css">
+                        <font>
+                           <Font name="Andalus" size="20.0" />
+                        </font>
+                     </TextField>
+                  </children>
+               </Pane>
+               <HBox alignment="CENTER" prefHeight="82.0" prefWidth="179.0">
+                  <children>
+                     <Button mnemonicParsing="false" onAction="#profile" prefHeight="38.0" prefWidth="134.0" style="-fx-background-color: orange;" styleClass="purple-button" stylesheets="@styles/style.css" text="Profile" textFill="WHITE">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </HBox>
+               <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="138.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Se déconnecter" textFill="WHITE">
+                  <font>
+                     <Font size="16.0" />
+                  </font>
+               </Button>
+            </children>
+            <styleClass>
+               <String fx:value="top-bar" />
+               <String fx:value="shadow" />
+            </styleClass>
+         </HBox>
+      </AnchorPane>
+   </children>
+</VBox>

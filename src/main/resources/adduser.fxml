@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="614.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.adduser">
+   <children>
+      <TextField fx:id="nom" layoutX="104.0" layoutY="117.0" />
+      <Text layoutX="43.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
+      <TextField fx:id="specialite" layoutX="497.0" layoutY="213.0" prefHeight="26.0" prefWidth="170.0" />
+      <TextField fx:id="numtel" layoutX="497.0" layoutY="161.0" prefHeight="26.0" prefWidth="170.0" />
+      <TextField fx:id="password" layoutX="104.0" layoutY="307.0" />
+      <TextField fx:id="email" layoutX="104.0" layoutY="213.0" />
+      <TextField fx:id="prenom" layoutX="104.0" layoutY="161.0" />
+      <Text layoutX="426.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gender" />
+      <Text layoutX="420.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="specialite" />
+      <Text layoutX="419.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="numtel" wrappingWidth="50.28515625" />
+      <Text layoutX="31.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="password" />
+      <Text layoutX="35.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email" wrappingWidth="41.66015625" />
+      <Text layoutX="32.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="prenom" />
+      <Button fx:id="ajouter" layoutX="310.0" layoutY="532.0" mnemonicParsing="false" onAction="#adduser" prefHeight="38.0" prefWidth="91.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Ajouter" textFill="WHITE" />
+      <TextField fx:id="profileImage" layoutX="765.0" layoutY="340.0" />
+      <Text layoutX="585.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="profileImage" />
+      <DatePicker fx:id="birth" layoutX="497.0" layoutY="307.0" />
+      <Button layoutX="666.0" layoutY="531.0" mnemonicParsing="false" onAction="#annuler" prefHeight="38.0" prefWidth="100.0" styleClass="purple-button" stylesheets="@styles/style.css" text="Annuler" textFill="WHITE" />
+      <Button fx:id="browseImageButton" layoutX="965.0" layoutY="253.0" onAction="#browseImage" prefHeight="32.0" prefWidth="82.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Parcourir" textFill="WHITE" />
+      <ImageView fx:id="userImageView" fitHeight="145.0" fitWidth="175.0" layoutX="752.0" layoutY="182.0" />
+      <ComboBox fx:id="gender" layoutX="497.0" layoutY="260.0" prefHeight="26.0" prefWidth="170.0" />
+
+   </children>
+</AnchorPane>

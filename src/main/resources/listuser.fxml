@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="697.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controles.listuser">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="-9.0" prefHeight="698.0" prefWidth="1221.0" styleClass="table-column" stylesheets="@sty/sty.css">
+         <children>
+            <TextField fx:id="nom" layoutX="472.0" layoutY="135.0" prefHeight="26.0" prefWidth="170.0" />
+            <Text layoutX="440.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
+            <TextField fx:id="gender" layoutX="469.0" layoutY="396.0" prefHeight="26.0" prefWidth="175.0" />
+            <TextField fx:id="numtel" layoutX="469.0" layoutY="349.0" prefHeight="26.0" prefWidth="175.0" />
+            <TextField fx:id="password" layoutX="469.0" layoutY="306.0" prefHeight="26.0" prefWidth="175.0" />
+            <TextField fx:id="roles" layoutX="469.0" layoutY="258.0" prefHeight="26.0" prefWidth="175.0" />
+            <TextField fx:id="email" layoutX="474.0" layoutY="217.0" prefHeight="26.0" prefWidth="166.0" />
+            <TextField fx:id="prenom" layoutX="474.0" layoutY="174.0" prefHeight="26.0" prefWidth="166.0" />
+            <Text layoutX="420.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+            <Text layoutX="403.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NumTel" wrappingWidth="50.28515625" />
+            <Text layoutX="403.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Text layoutX="428.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" />
+            <Text layoutX="419.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="41.66015625" />
+            <Text layoutX="419.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom" />
+            <TextField fx:id="profileImage" layoutX="469.0" layoutY="440.0" prefHeight="26.0" prefWidth="175.0" />
+            <Text layoutX="386.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ProfileImage" />
+            <DatePicker fx:id="birth" layoutX="469.0" layoutY="479.0" />
+            <Text layoutX="406.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthday" />
+            <ImageView fx:id="qrCodeImageView" fitHeight="137.0" fitWidth="138.0" layoutX="1070.0" layoutY="319.0" />
+            <TableView fx:id="aff" layoutX="667.0" layoutY="112.0" onMouseClicked="#rowClick" prefHeight="526.0" prefWidth="552.0">
+               <stylesheets>
+                  <URL value="@styles/style.css" />
+                  <URL value="@sty/sty.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="table-column" />
+                  <String fx:value="table-view" />
+               </styleClass></TableView>
+            <Label fx:id="idlabel" layoutX="126.0" layoutY="17.0" prefHeight="17.0" prefWidth="113.0" />
+            <TextField fx:id="search" layoutX="856.0" layoutY="44.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="808.0" prefWidth="194.0" styleClass="sidebar" stylesheets="@styles/stylesheet.css">
+         <children>
+            <Button layoutX="11.0" layoutY="395.0" mnemonicParsing="false" onAction="#gotoorg" prefHeight="39.0" prefWidth="179.0" stylesheets="@styles/style.css" text="Organisations" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="pink-button" />
+                  <String fx:value="purple-button" />
+               </styleClass>
+            </Button>
+            <ImageView fitHeight="109.0" fitWidth="131.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/lg.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="9.0" layoutY="337.0" mnemonicParsing="false" onAction="#gotodon" prefHeight="39.0" prefWidth="179.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Dons" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="284.0" mnemonicParsing="false" onAction="#gotolocal" prefHeight="31.0" prefWidth="179.0" styleClass="purple-button" stylesheets="@styles/style.css" text="Local" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="162.0" mnemonicParsing="false" onAction="#affuser" prefHeight="39.0" prefWidth="179.0" styleClass="purple-button" stylesheets="@styles/style.css" text="Liste utilisateurs" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="225.0" mnemonicParsing="false" onAction="#aduser" prefHeight="37.0" prefWidth="179.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Ajouter Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="456.0" mnemonicParsing="false" onAction="#gotorec" prefHeight="38.0" prefWidth="179.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Réclamations" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="7.0" layoutY="516.0" mnemonicParsing="false" onAction="#gotodossier" prefHeight="38.0" prefWidth="179.0" styleClass="purple-button" stylesheets="@styles/style.css" text="Dossiers Médicaux" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="8.0" layoutY="579.0" mnemonicParsing="false" onAction="#gotoconsultation" prefHeight="38.0" prefWidth="179.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Consultation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="7.0" layoutY="748.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="179.0" styleClass="pink-button" stylesheets="@styles/style.css" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
