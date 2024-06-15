@@ -237,8 +237,8 @@ public class ajouterDon implements Initializable {
             }
 
             long amountInCents = (long) (amount);
-
-            Stripe.apiKey = "sk_test_51OnL4vFaZiXCQR9PJzhuH3fizwwfYLtFmkkBNC4EyD8tW1GFam8BkEAjGAVpszcAe2fBIuqfa6HwEHYUQkVjqtRR00xvemV4aJ";
+            //insert api key
+            Stripe.apiKey = "";
 
             try {
                 PaymentIntentCreateParams params = PaymentIntentCreateParams.builder()
