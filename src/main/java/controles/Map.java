@@ -26,7 +26,7 @@ public class Map {
 
         // Chargez la carte Google Maps (ex: New York)
         webEngine.load("https://www.google.com/maps/@36.7948545,10.0608764,12z?entry=ttu");
-        //  webEngine.load("https://www.google.com/maps/embed/v1/place?q=New+York&key=AIzaSyDq9B8DFiLaF0EqLOUPjAKeUxZxVq5WvGI");
+        
     }
 
   /*  @FXML
