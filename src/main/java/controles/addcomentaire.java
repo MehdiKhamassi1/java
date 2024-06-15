@@ -55,10 +55,10 @@ public class addcomentaire {
     private ComboBox<String> publication_id_choicebox;
     publication data = publication.getInstance();
     public static final String TWILIO_PHONE_NUMBER = "+13253265603";
-    // Clé API de votre compte Twilio
-    public static final String ACCOUNT_SID = "AC74d9a1a9a629af8a3d0580a2b6b5186a";
-    // Clé secrète de votre compte Twilio
-    public static final String AUTH_TOKEN = "836191e32382847cf86eb9c31285c4f6";
+    // add twilio
+    public static final String ACCOUNT_SID = "";
+    // add twilio password
+    public static final String AUTH_TOKEN = "";
     @FXML
     void initialize() throws SQLException {
        // ObservableList<commentaire> list = FXCollections.observableList(ps.read());
